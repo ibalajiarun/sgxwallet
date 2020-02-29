@@ -91,7 +91,7 @@ int main(int argc, char *argv[]) {
       sign_automatically = true;
       break;
     case 'd':
-      DEBUG_PRINT = 1;
+      DEBUG_PRINT = 1;+-
       break;
     case '0':
       is_sgx_https = 0;

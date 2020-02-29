@@ -42,10 +42,12 @@ uint64_t oc_realloc (void *optr, size_t osz, size_t nsz)
 	return (uint64_t) nptr;
 }
 
-void oc_printf ()
-{
-    printf("haha\n");
-    fprintf( stderr, "haha\n");
+void oc_printf (const char *str) {
+
+    /* Proxy/Bridge will check the length and null-terminate
+     * the input string to prevent buffer overflow.
+     * */
+    fprintf(stderr, "%s", str);
 }
 
 
